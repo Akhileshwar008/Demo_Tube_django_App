@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Youtube Search</title>
+    <meta name="description" content="This is an example of a meta description.">
+    <link rel="stylesheet" type="text/css" href="/static/search/album.css">
+  </head>
+  <body>
+    <div class="main">
+        {% comment %} <img src="static/search/logo.png"> {% endcomment %}
+        <form action="/home/" method="POST">
+            <input type="text" placeholder="Search Here" name="search"/>
+            <input type="submit" value="Search">
+        </form>
+    </div>
+    <div class="videomain">
+    {% for data in context.videos %}
+      <iframe width="460" height="215" src='https://www.youtube.com/embed/{{data.id}}' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    {% endfor %}
+    </div>
+  </body>
+</html>

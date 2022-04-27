@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Youtube Search</title>
+    <meta name="description" content="This is an example of a meta description.">
+    <link rel="stylesheet" type="text/css" href="/static/search/album.css">
+  </head>
+  <body>
+    <div class="main">
+        {% comment %} <img src="static/search/logo.png"> {% endcomment %}
+        <form action="loginsuccess/" method="POST">
+            <input type="text" placeholder="Email" name="email"/>
+            <input type="text" placeholder="Password" name="password"/>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    <form style="text-align:center" action="/signup"><input type="submit" value="SignUp"></form>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+{% comment %} {% extends "base.html" %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+  <h2>Sign up</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign Up</button>
+  </form>
+{% endblock %} {% endcomment %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Youtube Search</title>
+    <meta name="description" content="This is an example of a meta description.">
+    <link rel="stylesheet" type="text/css" href="/static/search/album.css">
+  </head>
+  <body>
+    <div class="main">
+        {% comment %} <img src="static/search/logo.png"> {% endcomment %}
+        <form action="signupsuccess/" method="POST">
+            <input type="text" placeholder="Email" name="email"/>
+            <input type="text" placeholder="Password" name="password"/>
+            <input type="text" placeholder="Name" name="name"/>
+            <input type="text" placeholder="Sex" name="sex"/>
+            <input type="submit" value="SignUP">
+        </form>
+    </div>
+  </body>
+</html>
